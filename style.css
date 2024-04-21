@@ -68,7 +68,7 @@ body{
 	z-index: 20;
 }
 .hop{
-    animation: hop 0.7s ease-in-out;
+    animation: hop 0.8s ease-in-out;
 }
 
 .obstacle{

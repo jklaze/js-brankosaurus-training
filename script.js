@@ -34,7 +34,7 @@ function jump() {
     player.classList.add('hop');
     setTimeout(() => {
         player.classList.remove('hop');
-    }, 700);
+    }, 800);
     console.log('jump');
 }
 
