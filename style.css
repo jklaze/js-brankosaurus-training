@@ -55,7 +55,7 @@ body{
 	z-index: 20;
     right: -80px;
 	bottom: 8%;
-    animation: move-obstacle 2s linear;
+    animation: move-obstacle 2s linear infinite;
 }
 
 #game-over{
@@ -72,7 +72,7 @@ body{
     margin: 0;
     padding: 0;
 }
-#game-over button{
+#container button{
 	padding: 10px 20px;
 	font-family: 'Flappy';
 	font-size: 30px;
@@ -82,7 +82,7 @@ body{
 	border-radius: 8px;
 	cursor: pointer;
 }
-#game-over button:hover{
+#container button:hover{
     background-color: cadetblue;
     color: #ace5d4;
 }
