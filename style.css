@@ -45,6 +45,9 @@ body{
 	bottom: 6%;
 	z-index: 20;
 }
+.hop{
+    animation: hop 0.7s ease-in-out;
+}
 
 .obstacle{
 	position: absolute;
@@ -52,7 +55,7 @@ body{
 	z-index: 20;
     right: -80px;
 	bottom: 8%;
-    animation: move-obstacle 3s linear infinite;
+    animation: move-obstacle 2s linear;
 }
 
 #game-over{
@@ -90,6 +93,17 @@ body{
     }
     100%{
         right: 100%;
+    }
+}
+@keyframes hop{
+    0%{
+        bottom: 6%;
+    }
+    50%{
+        bottom: 40%;
+    }
+    100%{
+        bottom: 6%;
     }
 }
 
