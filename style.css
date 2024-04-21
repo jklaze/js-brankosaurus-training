@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'Flappy';
+    src: url('fonts/FlappyBirdRegular.ttf') format('truetype');
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f0f0f0;
+    font-family: 'Flappy', Arial, sans-serif;
+    margin: 0;
+}
+
+#container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 1000px;
+    height: 500px;
+    border: 1px solid #000;
+    background-color: #ace5d4;
+    background-image: url('images/background.gif');
+    background-repeat: repeat-x;
+    background-size: 30% 60%;
+    background-position: bottom;
+}
+
+#score{
+    position: absolute;
+    top: 15px;
+    font-size: 72px;
+    color: cadetblue;
+    z-index: 10;
+}
+
+#player{
+	position: absolute;
+	width: 100px;
+	left: 10%;
+	bottom: 6%;
+	z-index: 20;
+}
+
+.obstacle{
+	position: absolute;
+    width: 80px;
+	z-index: 20;
+    right: -80px;
+	bottom: 8%;
+    animation: move-obstacle 3s linear infinite;
+}
+
+#game-over{
+	font-size: 70px;
+	color: cadetblue;
+	position: absolute;
+	text-align: center;
+    z-index: 30;
+}
+#game-over h1{
+    font-weight: normal;
+}
+#game-over *{
+    margin: 0;
+    padding: 0;
+}
+#game-over button{
+	padding: 10px 20px;
+	font-family: 'Flappy';
+	font-size: 30px;
+	background-color: #ace5d4;
+	color: cadetblue;
+	border: 1px solid cadetblue;
+	border-radius: 8px;
+	cursor: pointer;
+}
+#game-over button:hover{
+    background-color: cadetblue;
+    color: #ace5d4;
+}
+
+@keyframes move-obstacle{
+    0%{
+        right: -80px;
+    }
+    100%{
+        right: 100%;
+    }
+}
+
+
+.hidden{
+    display: none;
+}
