@@ -3,6 +3,11 @@
     src: url('fonts/FlappyBirdRegular.ttf') format('truetype');
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body{
     display: flex;
     justify-content: center;
@@ -26,8 +31,25 @@ body{
     background-color: #ace5d4;
     background-image: url('images/background.gif');
     background-repeat: repeat-x;
-    background-size: 30% 60%;
+    background-size: 40% 65%;
     background-position: bottom;
+}
+#container h1{
+    font-weight: normal;
+}
+#container button{
+	padding: 10px 20px;
+	font-family: 'Flappy';
+	font-size: 40px;
+	background-color: #ace5d4;
+	color: cadetblue;
+	border: 1px solid cadetblue;
+	border-radius: 8px;
+	cursor: pointer;
+}
+#container button:hover{
+    background-color: cadetblue;
+    color: #ace5d4;
 }
 
 #score{
@@ -55,36 +77,28 @@ body{
 	z-index: 20;
     right: -80px;
 	bottom: 8%;
-    animation: move-obstacle 2s linear infinite;
+    animation: move-obstacle 2.5s ease-in;
 }
 
-#game-over{
-	font-size: 70px;
-	color: cadetblue;
-	position: absolute;
-	text-align: center;
+#home{
+    position: absolute;
+    text-align: center;
+    font-size: 60px;
+    color: cadetblue;
+    top: 20%;
     z-index: 30;
 }
-#game-over h1{
+#home h1{
     font-weight: normal;
 }
-#game-over *{
-    margin: 0;
-    padding: 0;
-}
-#container button{
-	padding: 10px 20px;
-	font-family: 'Flappy';
-	font-size: 30px;
-	background-color: #ace5d4;
+
+
+#game-over{
+	position: absolute;
+	text-align: center;
+	font-size: 70px;
 	color: cadetblue;
-	border: 1px solid cadetblue;
-	border-radius: 8px;
-	cursor: pointer;
-}
-#container button:hover{
-    background-color: cadetblue;
-    color: #ace5d4;
+    z-index: 30;
 }
 
 @keyframes move-obstacle{
